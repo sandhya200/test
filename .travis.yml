@@ -3,14 +3,14 @@ services:
     - docker
 
 script:
-    - docker build -t mannydesigns/node .
-    - docker images mannydesigns/node
+    - docker build -t sandhyay/node .
+    - docker images sandhyay/node
 
 before_deploy:
-    - docker login -u sandhyay -p Sandy123$
+    - docker login -u sandhyay --password-stdin Sandy123$
 
 deploy:
     provider: script
-    script: docker push mannydesigns/node
+    script: docker push sandhyay/node
     on:
         branch: master
