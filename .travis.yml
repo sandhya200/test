@@ -7,7 +7,7 @@ script:
     - docker images mannydesigns/node
 
 before_deploy:
-    - docker login -u sandhya.yapuram@gmail.com -p Sandy123$
+    - docker login -u sandhyay -p Sandy123$
 
 deploy:
     provider: script
